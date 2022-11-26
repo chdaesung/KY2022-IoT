@@ -15,7 +15,7 @@ def hey_watson(translate, source, target):
     translated = language_translator.translate(text=translate, source=source, target=target).get_result()
     return translated['translations'][0]['translation'] 
 
-lang_dict = { "ko":"한국어", "ja":"일본어", "zh":"중국어", "vi":"베트남어", "de":"독일어", "fr":"프랑스어", "it":"이탈리아어", "es":"스페인어" }
+lang_dict = { "ko":"한국어", "de":"독일어", "it":"이탈리아어" }
 
 for key  in lang_dict:
   print(lang_dict[key], ':\t', hey_watson("Where is the Itaewon station?", 'en', key))
